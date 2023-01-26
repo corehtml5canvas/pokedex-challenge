@@ -1,0 +1,19 @@
+.Pokedex {
+  text-align: center;
+}
+
+.FilterButton {
+  background-color: #eee;
+  font-size: calc(10px + 1vmin);
+  cursor: pointer;
+  width: 200px;
+}
+
+.error {
+  display: 'flex';
+  align-items: 'center';
+  justify-content: 'center';
+  width: 100vw;
+  font-size: '1.2em';
+  color: 'red';
+}

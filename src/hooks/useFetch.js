@@ -1,0 +1,48 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+// General purpose useFetch hook that fetches, processes, and filters
+// items from a URL
+
+const useFetch = (url, searchParam, extractData, process, filter) => {
+  const [loading, setLoading] = useState(false);
+  const [listItems, setListItems] = useState([]);
+  const [filteredItems, setFilteredItems] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchItems = async () => {
+      console.log("FETCHING"); // Make sure we're not fetching more than necessary
+      setLoading(true);
+
+      try {
+        setListItems(process(extractData(await axios(url))));
+        setLoading(false);
+      } catch (ex) {
+        setError(ex.message);
+      }
+    };
+
+    if (listItems.length === 0) {
+      fetchItems();
+    }
+  }, [url, extractData, process, listItems.length]);
+
+  useEffect(() => {
+    if (searchParam && listItems.length > 0) {
+      console.log('FILTERING'); // Make sure we're not filtering more than necessary
+      setFilteredItems(filter(listItems, searchParam));
+    }
+    else if (searchParam === '') {
+      setFilteredItems(listItems);
+    }
+  }, [filter, listItems, searchParam]);
+
+  return {
+    loading,
+    error,
+    listItems: filter ? filteredItems : listItems,
+  };
+};
+
+export default useFetch;
