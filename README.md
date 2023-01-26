@@ -1,3 +1,9 @@
+Here's what it looks like. Search input is debounced.
+
+![image](screenshot-1.png)
+
+![image](screenshot-2.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
