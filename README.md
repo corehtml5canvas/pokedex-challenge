@@ -1,14 +1,28 @@
-Here's what it looks like.
+Here's what it looks like. The Search input is debounced.
 
 ![image](screenshot-1.png)
 
-I debounced input to the search field.
+Click on a pokemon to see more information.
 
 ![image](screenshot-2.png)
 
-You can filter types and weaknesses after clicking on the primary Filter button.
+Filter types and weaknesses after clicking on the primary Filter button.
 
 ![image](screenshot-3.png)
+
+Just flying and rock...
+
+![image](screenshot-4.png)
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn start`
+
+Runs the app in the development mode.<br />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
