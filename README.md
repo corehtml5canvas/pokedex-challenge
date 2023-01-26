@@ -1,8 +1,14 @@
-Here's what it looks like. Search input is debounced.
+Here's what it looks like.
 
 ![image](screenshot-1.png)
 
+I debounced input to the search field.
+
 ![image](screenshot-2.png)
+
+You can filter types and weaknesses after clicking on the primary Filter button.
+
+![image](screenshot-3.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
