@@ -24,7 +24,7 @@ const FilterModal = ({visible, setFilterBits, hideModal}) => {
   });
 
   const checkboxDivStyle = {
-    height: '25vh',
+    height: '65vh',
     overflow: 'scroll',
   };
 
