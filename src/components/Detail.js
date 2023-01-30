@@ -1,48 +1,42 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import Card from './Card';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+import Card from './Card'
+import './Detail.css'
 
-const Detail = ({location: {state: {item}}}) => {
-  const outerDivStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  };
-
-  return (
-    <div style={outerDivStyle}>
-      <Card style={{width: '30vh'}}>
-        <div style={{marginBottom: '5px'}}>
+const Detail = ({location: {state: {item}}}) =>
+    <div className='DetailContainer'>
+      <Card className='DetailCard'>
+        <div className='Item'>
           <img alt={item.name} src={item.img} />
         </div>
 
-        <div style={{marginBottom: '5px'}}>
+        <div className='Item'>
           <b>Name</b> {item.name}
         </div>
 
-        <div style={{marginBottom: '5px'}}>
+        <div className='Item'>
           <b>Num:</b> {item.num}
         </div>
 
-        <div style={{marginBottom: '5px'}}>
+        <div className='Item'>
           <b>Height:</b> {item.height}
         </div>
 
-        <div style={{marginBottom: '5px'}}>
+        <div className='Item'>
           <b>Weight:</b> {item.weight}
         </div>
 
-        <div style={{marginBottom: '5px'}}>
+        <div className='Item'>
           <b>Type:</b> {item.type.join(' ')}
         </div>
 
-        <div style={{marginBottom: '5px'}}>
+        <div className='Item'>
           <b>Weaknesses:</b> {item.weaknesses.join(' ')}
         </div>
 
         { item.prevEolution &&
-          <div style={{marginBottom: '5px'}}>
+          <div className='EvolutionContainer'>
             <b>Prev Evolution:</b>
             { item.prevEvolution.map(item =>
                 <Link to={{
@@ -58,7 +52,7 @@ const Detail = ({location: {state: {item}}}) => {
         }
 
         { item.nextEvolution &&
-          <div style={{marginBottom: '5px'}}>
+          <div className='EvolutionContainer'>
             <b>Next Evolution:</b>
             { item.nextEvolution.map(item =>
                 <Link to={{
@@ -74,12 +68,10 @@ const Detail = ({location: {state: {item}}}) => {
         }
 
         <Link to='/'>
-          <button style={{margin: '20px'}}>Back</button>
+          <button className='BackButton'>Back</button>
         </Link>
       </Card>
     </div>
-  )
-}
 
 Detail.propTypes = {
   item: PropTypes.array.isRequired,

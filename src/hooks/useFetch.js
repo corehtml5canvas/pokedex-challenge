@@ -12,7 +12,6 @@ const useFetch = (url, searchParam, extractData, process, filter) => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      console.log("FETCHING"); // Make sure we're not fetching more than necessary
       setLoading(true);
 
       try {
@@ -30,7 +29,6 @@ const useFetch = (url, searchParam, extractData, process, filter) => {
 
   useEffect(() => {
     if (searchParam && listItems.length > 0) {
-      console.log('FILTERING'); // Make sure we're not filtering more than necessary
       setFilteredItems(filter(listItems, searchParam));
     }
     else if (searchParam === '') {

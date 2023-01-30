@@ -1,0 +1,23 @@
+.Item {
+  margin-bottom: 5px;
+}
+
+.BackButton {
+  margin: 20px;
+}
+
+.EvolutionContainer {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.DetailContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.DetailCard {
+  width: 30vh;
+}

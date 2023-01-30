@@ -1,0 +1,16 @@
+.OuterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.InnerContainer {
+  margin-top: 10px;
+  height: 80vh;
+  overflow: scroll;
+}
+
+.Item {
+  margin-bottom: 5px;
+}

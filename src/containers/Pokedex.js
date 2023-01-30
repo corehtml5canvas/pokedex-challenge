@@ -73,8 +73,8 @@ const Pokedex = () => {
       <section>
         { !error &&
           <button
-            className="FilterButton"
-            style={{ marginTop: "15px" }}
+            className='FilterButton'
+            style={{ marginTop: '15px' }}
             onClick={() => setFilterModalVisible(true)} >
             Filter
           </button>

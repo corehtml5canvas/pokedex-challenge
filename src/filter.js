@@ -4,13 +4,9 @@ const filterBits = {
   Psychic: 8192, Ice: 16384, Dragon: 32768, Dark: 65536, Fairy: 131072,
 };
 
-const filterBySearchTerm = (items, searchTerm) =>
-  // Assumption: includes instead of startsWith
-  items.filter((item) => item.name.includes(searchTerm));
-
-const processListItems = items => {
-  return addEvolutionItems(addFilterValues(items));
-}
+const getItemByName = (items, name) => items.find(item => item.name === name)
+const processListItems = items => addEvolutionItems(addFilterValues(items));
+const filterBySearchTerm = (items, searchTerm) => items.filter((item) => item.name.includes(searchTerm));
 
 // pre_evolution and next_evolution arrays do not contain full-fledged items,
 // so those items can't be displayed on the Details page. This function
@@ -32,10 +28,6 @@ const addEvolutionItems = items => {
 
     return item;
   })
-}
-
-const getItemByName = (items, name) => {
-  return items.find(item => item.name === name)
 }
 
 // Reduce types and weaknesses to numbers whose bits represent an item's types
@@ -72,7 +64,7 @@ const filterByTypeAndWeakness = (items, bits) => { // bits come from FilterModal
   return bits.weaknessBits === 0 ? typeItems : weaknessItems;
 }
 
-export { // Imported in Pokedex.js
+export { // Used in Pokedex.js and FilterModal.js
   filterBits,
   processListItems,
   filterBySearchTerm,

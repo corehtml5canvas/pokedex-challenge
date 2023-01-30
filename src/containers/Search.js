@@ -15,7 +15,7 @@ const Search = React.memo(({setSearchCallback}) => {
   }, []);
 
   useEffect(() => {
-    if (debouncedText !== null) {
+    if (debouncedText) {
       setSearchCallback(debouncedText);
     }
   }, [debouncedText, setSearchCallback]);
@@ -38,7 +38,6 @@ const Search = React.memo(({setSearchCallback}) => {
 
 Search.propTypes = {
   setSearchCallback: PropTypes.func.isRequired,
-  resetBits: PropTypes.func.isRequired,
 }
 
 export default Search;
