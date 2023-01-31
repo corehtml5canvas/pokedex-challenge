@@ -1,4 +1,6 @@
-Here's what it looks like. The Search input is debounced.
+See Challenge_Instructions.pdf for a description of the application. 
+
+Here's the app. The Search input is debounced.
 
 ![image](screenshot-1.png)
 
