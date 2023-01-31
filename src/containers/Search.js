@@ -15,9 +15,7 @@ const Search = React.memo(({setSearchCallback}) => {
   }, []);
 
   useEffect(() => {
-    if (debouncedText) {
-      setSearchCallback(debouncedText);
-    }
+    setSearchCallback(debouncedText);
   }, [debouncedText, setSearchCallback]);
 
   return (

@@ -31,7 +31,7 @@ const useFetch = (url, searchParam, extractData, process, filter) => {
     if (searchParam && listItems.length > 0) {
       setFilteredItems(filter(listItems, searchParam));
     }
-    else if (searchParam === '') {
+    else {
       setFilteredItems(listItems);
     }
   }, [filter, listItems, searchParam]);

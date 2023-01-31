@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Card from './Card'
 import './Detail.css'
 
-const Detail = ({location: {state: {item}}}) =>
+const Detail = React.memo(({location: {state: {item}}}) =>
     <div className='DetailContainer'>
       <Card className='DetailCard'>
         <div className='Item'>
@@ -72,6 +72,7 @@ const Detail = ({location: {state: {item}}}) =>
         </Link>
       </Card>
     </div>
+)
 
 Detail.propTypes = {
   item: PropTypes.array.isRequired,
