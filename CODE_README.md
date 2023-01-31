@@ -22,6 +22,7 @@ React Specific
 
 JavaScript Specific
 
+- Debounces input for the search component
 - For performance, tracks strengths and weaknesses with bits
 - Implements a modal with a backdrop
 - The useFetch custom hook is a higher order function
