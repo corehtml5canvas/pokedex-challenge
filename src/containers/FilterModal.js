@@ -53,8 +53,8 @@ const FilterModal = ({visible, setFilterBits, hideModal}) => {
 
   const done = () => {
     setFilterBits({ // Set filter bits in Pokedex
-      typeBits: typeBits,
-      weaknessBits: weaknessBits,
+      typeBits,
+      weaknessBits,
     });
 
     hideModal();

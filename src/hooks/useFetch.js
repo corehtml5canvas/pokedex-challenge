@@ -4,7 +4,7 @@ import axios from "axios";
 // General purpose useFetch hook that fetches, processes, and filters
 // items from a URL
 
-const useFetch = (url, searchParam, extractData, process, filter) => {
+const useFetch = (url, extractData, process, filter) => {
   const [loading, setLoading] = useState(false);
   const [listItems, setListItems] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
@@ -28,13 +28,13 @@ const useFetch = (url, searchParam, extractData, process, filter) => {
   }, [url, extractData, process, listItems.length]);
 
   useEffect(() => {
-    if (searchParam && listItems.length > 0) {
-      setFilteredItems(filter(listItems, searchParam));
+    if (listItems.length > 0) {
+      setFilteredItems(filter(listItems));
     }
     else {
       setFilteredItems(listItems);
     }
-  }, [filter, listItems, searchParam]);
+  }, [filter, listItems]);
 
   return {
     loading,

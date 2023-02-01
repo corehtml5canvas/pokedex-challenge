@@ -53,7 +53,6 @@ const Pokedex = () => {
     error
   } = useFetch( // Make URL invalid to see error rendered below
     "https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json",
-    searchParam,      // Either bits or search term
     extractData,      // Extract pokemon data
     processListItems, // Process
     filterFunction,   // Filter
